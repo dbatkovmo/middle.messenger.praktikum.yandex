@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+{{#block "head"}}
+    <head>
+        {{#block "meta"}}
+            {{> meta}}
+        {{/block}}
+
+        {{#block "title"}}
+            <title>{{title}}</title>
+        {{/block}}
+
+        {{#block "styles"}}
+            {{#each stylesheets}}
+                <link href="{{this}}" rel="stylesheet"/>
+            {{/each}}
+        {{/block}}
+    </head>
+{{/block}}
+
+{{#block "body"}}
+    <body>
+    <div class="page-error">
+        <div class="page-error__box">
+            {{#block "main"}}
+            {{/block}}
+        </div>
+    </div>
+
+    {{#block "scripts"}}
+        {{#each scripts}}
+            <script src="{{this}}" type="module"></script>
+        {{/each}}
+    {{/block}}
+
+    </body>
+{{/block}}
+</html>

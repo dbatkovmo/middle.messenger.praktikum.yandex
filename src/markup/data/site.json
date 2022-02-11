@@ -1,0 +1,30 @@
+{
+  "domain": "http://localhost:3000",
+  "protocol": "http",
+  "links": [
+    {
+      "text": "Авторизация",
+      "url": "./login.hbs"
+    },
+    {
+      "text": "Зарегистрироваться",
+      "url": "./registration.hbs"
+    },
+    {
+      "text": "Чат",
+      "url": "./chat.hbs"
+    },
+    {
+      "text": "Настройки пользователя",
+      "url": "./settings-user.hbs"
+    },
+    {
+      "text": "404",
+      "url": "./404.hbs"
+    },
+    {
+      "text": "500",
+      "url": "./500.hbs"
+    }
+  ]
+}

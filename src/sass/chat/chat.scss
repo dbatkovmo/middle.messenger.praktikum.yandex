@@ -1,0 +1,115 @@
+@import "../main";
+@import "chat-info";
+@import "message";
+
+.chat-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #1c1e1f;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+  height: 90vh;
+  color: #d4d4d4;
+  border-radius: 15px;
+  background: #21212B;
+  overflow: hidden;
+}
+
+.chat__wrap-main-box {
+  display: flex;
+  height: 100%;
+}
+
+.chat__interface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  border-bottom: 1px solid #808086;
+}
+
+.chat__my-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+.chat__left-box {
+  width: 350px;
+  padding: 25px;
+  overflow: auto;
+  background: #181a1b;
+}
+
+.chat__right-box {
+  width: calc(100% - 350px);
+  background: #161819;
+}
+
+.chat__body {
+  height: calc(100% - 80px);
+  padding: 25px 25px 0 25px;
+  overflow: auto;
+}
+
+.chat__footer {
+  padding: 20px 25px;
+}
+
+.chat__box-input {
+  display: flex;
+  width: 100%;
+  height: max-content;
+}
+
+.chat__input-message {
+  height: 25px;
+  width: 100%;
+  border: none;
+  resize: none;
+  color: #fff;
+  background: #27292e;
+  padding: 0 10px;
+}
+
+.chat__input-message:focus {
+  outline: none;
+}
+
+.chat__button-send {
+  border: none;
+  background: #27292e;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.chat__button-send {
+  color: #fff;
+}
+
+.chat__control-panel {
+  background: #27292e;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.icon-telegram {
+  &:before {
+    content: '';
+    background: url("../../../static/icons/telegram.png");
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+  }
+}

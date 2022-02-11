@@ -1,0 +1,34 @@
+.chat-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.chat-info__box-user-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.chat-info__user-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.chat-info__user-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.chat-info__user-status-offline {
+  &:before {
+    content: '';
+  }
+}
+.chat-info__user-status-online {
+  &:before {
+    content: '';
+  }
+}

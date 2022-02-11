@@ -1,0 +1,80 @@
+@import "main";
+@import "components/input";
+@import "components/button";
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #1c1e1f;
+}
+
+.form-auth__box {
+  width: 360px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgb(0 0 0 / 8%), 0 45px 64px -12px rgb(0 0 0 / 8%);
+}
+
+.form-auth__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.form-auth__box-input {
+  margin: 25px 0;
+
+  .form-auth__row {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form-auth__label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-auth__input {
+  width: 100%;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.form-auth__button-action {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.passage {
+  margin-top: 25px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #E8E8E8;
+    border-radius: 5px;
+  }
+}
+
+.passage__title {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.passage__link {
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+  color: #0085FF;
+  width: 100%;
+}

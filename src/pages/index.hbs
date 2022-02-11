@@ -1,0 +1,59 @@
+---
+title: Авторизация
+labelTextId: Введите ваш ID
+labelTextPass: Введите пароль
+passageTitle: У Вас нет аккаунта?
+linkTextRegistration: Ещё не зарегистрированы?
+linkRegistration: ./registration
+stylesheets:
+- ../sass/auth.scss
+scripts:
+- ../modules/auth/auth.js
+---
+
+{{#extend "baseLayout"}}
+    {{#content "main"}}
+        <div class="auth">
+            <div class="form-auth__box">
+                <form method="post" action="#" novalidate>
+                    <div class="form-auth__title">{{title}}</div>
+                    <div class="form-auth__box-input">
+                        <div class="form-auth__row">
+                            <div class="form-auth__label-box">
+                                <label class="form-auth__label" for="login">{{labelTextId}}</label>
+                            </div>
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="login"
+                                        type="text"
+                                        name="login"
+                                        placeholder="email"}}
+                            </div>
+                        </div>
+                        <div class="form-auth__row">
+                            <div class="form-auth__label-box">
+                                <label class="form-auth__label" for="password">{{labelTextPass}}</label>
+                            </div>
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="password"
+                                        type="password"
+                                        name="password"
+                                        placeholder="* * * * * * *"}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-auth__box-button-action">
+                        {{> button  nameButton='Войти'
+                                className='button_width_max button_color_blue form-auth__button-action'
+                                type='submit'}}
+                    </div>
+                </form>
+                <div class="passage">
+                    <div class="passage__title">{{ passageTitle }}</div>
+                    <a href="{{ linkRegistration }}" class="passage__link">{{ linkTextRegistration }}</a>
+                </div>
+            </div>
+        </div>
+    {{/content}}
+{{/extend}}

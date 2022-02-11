@@ -1,0 +1,16 @@
+---
+title: 404
+textCodeError: 404
+textInfo: Не туда попали
+stylesheets:
+- ../sass/server-error.scss
+scripts:
+- ../modules/server-error/server-error.js
+---
+
+{{#extend "errorLayout"}}
+    {{#content "main"}}
+        <div>{{ textCodeError }}</div>
+        <div class="page-error__info">{{ textInfo }}</div>
+    {{/content}}
+{{/extend}}

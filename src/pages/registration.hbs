@@ -1,0 +1,84 @@
+---
+title: Зарегистрироваться
+nameForm: Авторизоваться
+labelTextId: Введите ваш ID
+labelTextPass: Введите пароль
+linkTextSing: Зарегистрироваться
+stylesheets:
+- ../sass/auth.scss
+scripts:
+- ../modules/auth/auth.js
+---
+
+{{#extend "baseLayout"}}
+    {{#content "main"}}
+        <div class="auth">
+            <div class="form-auth__box">
+                <form method="post" action="#" novalidate>
+                    <div class="form-auth__title">{{title}}</div>
+                    <div class="form-auth__box-input">
+                        <div class="form-auth__row">
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="first_name"
+                                        type="text"
+                                        name="first_name"
+                                        placeholder="Имя"}}
+                            </div>
+                        </div>
+                        <div class="form-auth__row">
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="second_name"
+                                        type="text"
+                                        name="second_name"
+                                        placeholder="Отчество"}}
+                            </div>
+                        </div>
+                        <div class="form-auth__row">
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="login"
+                                        type="text"
+                                        name="login"
+                                        placeholder="Придумайте логин"}}
+                            </div>
+                        </div>
+                        <div class="form-auth__row">
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="email"
+                                        type="text"
+                                        name="email"
+                                        placeholder="Email"}}
+                            </div>
+                        </div>
+                        <div class="form-auth__row">
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="password"
+                                        type="password"
+                                        name="password"
+                                        placeholder="Придумайте пароль"}}
+                            </div>
+                        </div>
+                        <div class="form-auth__row">
+                            <div class="form-auth__cell">
+                                {{> input className="form-auth__input"
+                                        id="phone"
+                                        type="text"
+                                        name="phone"
+                                        placeholder="Номер мобильного телефона"}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-auth__box-button-action">
+                        {{> button className="button_width_max button_color_blue form-auth__button-action"
+                                type="submit"
+                                nameButton="Зарегистрироваться"}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,16 @@
+---
+title: 500
+textCodeError: 500
+textInfo: Мы уже фиксим
+stylesheets:
+- ../sass/server-error.scss
+scripts:
+- ../modules/server-error/server-error.js
+---
+
+{{#extend "errorLayout"}}
+    {{#content "main"}}
+        <div>{{ textCodeError }}</div>
+        <div class="page-error__info">{{ textInfo }}</div>
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,29 @@
+.custom-button {
+  border-radius: 5px;
+}
+
+.button_color_blue {
+  background: #0085FF;
+  color: #fff;
+
+  &:hover {
+    background: #0675db;
+  }
+}
+
+.button_color_green {
+  color: #fff;
+  background: #28a745;
+
+  &:hover {
+    background: #218838;
+  }
+}
+
+.link_width_max {
+  width: 100%;
+}
+
+.button_width_max {
+  width: 100%;
+}

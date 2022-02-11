@@ -1,0 +1,72 @@
+---
+title: Настройки пользователя
+stylesheets:
+- ../sass/settings-user.scss
+scripts:
+- ../modules/settings-user/settings-user.js
+---
+
+{{#extend "baseLayout"}}
+    {{#content "main"}}
+        <div class="settings-user-page">
+            <div class="wrap-settings-user">
+                <div class="settings-user-page__title">{{title}}</div>
+                <div class="settings-user">
+                    <div class="settings-user__box-avatar">
+                        <img class="settings-user__avatar"
+                             src="https://image.freepik.com/free-photo/happy-bearded-young-man-looks-with-joyful-expression-has-friendly-smile-wears-yellow-sweater-red-hat_295783-1388.jpg">
+                        <button class="custom-button settings-user__button-edit-avatar">изменить</button>
+                        <input class="settings-user__input" type="file" name="avatar" hidden>
+                    </div>
+                    <div class="settings-user__main">
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Имя</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info" type="text" name="first_name"}}
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Отчество</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info"type="text" name="second_name"}}
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Логин</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info"type="text" name="login"}}
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Email</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info" type="text" name="email"}}
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Номер мобильного телефона</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info" type="text" name="phone"}}
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Ваш пароль</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info" type="text" name="oldPassword"}}
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Новый пароль</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info" type="text" name="newPassword"}}
+                            </div>
+                        </div>
+                    </div>
+                    {{> button className="settings-user__button-save button_width_max button_color_green"
+                            type="button"
+                            nameButton="Сохранить"}}
+                </div>
+            </div>
+        </div>
+    {{/content}}
+{{/extend}}
