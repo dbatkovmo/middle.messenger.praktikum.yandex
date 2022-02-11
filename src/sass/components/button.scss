@@ -11,6 +11,15 @@
   }
 }
 
+.button_color_green {
+  color: #fff;
+  background: #28a745;
+
+  &:hover {
+    background: #218838;
+  }
+}
+
 .link_width_max {
   width: 100%;
 }

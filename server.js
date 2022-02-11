@@ -34,10 +34,6 @@ routes.forEach(({ path, file }) => {
     });
 })
 
-app.get('/*', (req, res) => {
-    res.sendFile(`${filesDirectory}/index.html`);
-});
-
 app.use(function (req, res, next) {
     res.status(404).sendFile(`${filesDirectory}/404.html`);
 });

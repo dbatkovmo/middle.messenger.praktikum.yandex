@@ -22,67 +22,49 @@ scripts:
                         <div class="settings-user__row">
                             <div class="settings-user__label">Имя</div>
                             <div class="settings-user__cell">
-                                <div class="settings-user__info">Дмитрий</div>
-                                <button class="custom-button settings-user__button-edit" data-name="first_name">
-                                    изменить
-                                </button>
+                                {{> input className="settings-user__info" type="text" name="first_name"}}
                             </div>
                         </div>
                         <div class="settings-user__row">
                             <div class="settings-user__label">Отчество</div>
                             <div class="settings-user__cell">
-                                <div class="settings-user__info">Олегович</div>
-                                <button class="custom-button settings-user__button-edit" data-name="second_name">
-                                    изменить
-                                </button>
+                                {{> input className="settings-user__info"type="text" name="second_name"}}
                             </div>
                         </div>
                         <div class="settings-user__row">
                             <div class="settings-user__label">Логин</div>
                             <div class="settings-user__cell">
-                                <div class="settings-user__info">dbatkovmo</div>
-                                <button class="custom-button settings-user__button-edit" data-name="login">изменить
-                                </button>
+                                {{> input className="settings-user__info"type="text" name="login"}}
                             </div>
                         </div>
                         <div class="settings-user__row">
                             <div class="settings-user__label">Email</div>
                             <div class="settings-user__cell">
-                                <div class="settings-user__info">dbatkovmo@gmail.com</div>
-                                <button class="custom-button settings-user__button-edit" data-name="email">изменить
-                                </button>
+                                {{> input className="settings-user__info" type="text" name="email"}}
                             </div>
                         </div>
                         <div class="settings-user__row">
                             <div class="settings-user__label">Номер мобильного телефона</div>
                             <div class="settings-user__cell">
-                                <div class="settings-user__info">+79969601476</div>
-                                <button class="custom-button settings-user__button-edit" data-name="phone">изменить
-                                </button>
+                                {{> input className="settings-user__info" type="text" name="phone"}}
                             </div>
                         </div>
                         <div class="settings-user__row">
-                            <div class="settings-user__label">Пароль</div>
+                            <div class="settings-user__label">Ваш пароль</div>
                             <div class="settings-user__cell">
-                                <div class="settings-user__info">*******</div>
-                                <button class="custom-button settings-user__button-edit" data-name="password">изменить
-                                </button>
+                                {{> input className="settings-user__info" type="text" name="oldPassword"}}
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Новый пароль</div>
+                            <div class="settings-user__cell">
+                                {{> input className="settings-user__info" type="text" name="newPassword"}}
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade modal-edit-settings" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                <div class="modal-content p-3">
-                    <div class="modal-edit-settings__title">Редактирование</div>
-                    <div class="modal-edit-settings__box-input">
-                        <input class="custom-input modal-edit-settings__input">
-                    </div>
-                    <button class="custom-button button_color_blue modal-edit-settings__button-save">Изменить</button>
+                    {{> button className="settings-user__button-save button_width_max button_color_green"
+                            type="button"
+                            nameButton="Сохранить"}}
                 </div>
             </div>
         </div>
