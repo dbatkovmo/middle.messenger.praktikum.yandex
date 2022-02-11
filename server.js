@@ -35,7 +35,7 @@ routes.forEach(({ path, file }) => {
 })
 
 app.get('/*', (req, res) => {
-    res.sendFile(`${filesDirectory}/login.html`);
+    res.sendFile(`${filesDirectory}/index.html`);
 });
 
 app.use(function (req, res, next) {
