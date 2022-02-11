@@ -30,4 +30,4 @@
 ### Дополнительно
 Netlify домен - https://keen-lewin-fd313e.netlify.app
 
-Pull request - https://github.com/Alkamenos/middle.messenger.praktikum.yandex/
+Pull request - https://github.com/dbatkovmo/middle.messenger.praktikum.yandex/pull/1
