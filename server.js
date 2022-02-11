@@ -26,7 +26,6 @@ const routes = [
     }
 ]
 
-
 app.use(express.static(`${__dirname}/dist`));
 
 routes.forEach(({ path, file }) => {
@@ -35,7 +34,7 @@ routes.forEach(({ path, file }) => {
     });
 })
 
-app.use('/*', (req, res) => {
+app.use('/', (req, res) => {
     res.sendFile(`${filesDirectory}/login.html`);
 })
 
