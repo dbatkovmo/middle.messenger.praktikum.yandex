@@ -34,12 +34,12 @@ routes.forEach(({ path, file }) => {
     });
 })
 
-app.use('*/*', (req, res) => {
-    res.sendFile(`${filesDirectory}/login.html`);
-})
+// app.use('*/*', (req, res) => {
+//     res.sendFile(`${filesDirectory}/login.html`);
+// })
 
 app.use(function (req, res, next) {
-    res.status(404).sendFile(`${filesDirectory}/404.html`);
+    res.status(404).sendFile(`${filesDirectory}/login.html`);
 });
 
 app.listen(port, () => {
