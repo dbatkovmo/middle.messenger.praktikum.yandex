@@ -36,7 +36,7 @@ routes.forEach(({ path, file }) => {
 })
 
 app.use('/*', (req, res) => {
-    res.sendFile(__dirname + '/dist/login.html');
+    res.sendFile(`${filesDirectory}/login.html`);
 })
 
 app.use(function (req, res, next) {
