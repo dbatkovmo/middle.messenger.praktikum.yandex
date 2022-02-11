@@ -9,6 +9,7 @@ stylesheets:
 scripts:
 - ../modules/auth/auth.js
 ---
+
 {{#extend "baseLayout"}}
     {{#content "main"}}
         <div class="auth">
@@ -18,76 +19,63 @@ scripts:
                     <div class="form-auth__box-input">
                         <div class="form-auth__row">
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="first_name"
-                                       type="text"
-                                       name="first_name"
-                                       autocomplete="off"
-                                       aria-invalid="true"
-                                       placeholder="Имя">
+                                {{> input class="form-auth__input"
+                                        id="first_name"
+                                        type="text"
+                                        name="first_name"
+                                        placeholder="Имя"}}
                             </div>
                         </div>
                         <div class="form-auth__row">
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="second_name"
-                                       type="text"
-                                       name="second_name"
-                                       autocomplete="off"
-                                       aria-invalid="true"
-                                       placeholder="Отчество">
+                                {{> input class="form-auth__input"
+                                        id="second_name"
+                                        type="text"
+                                        name="second_name"
+                                        placeholder="Отчество"}}
                             </div>
                         </div>
                         <div class="form-auth__row">
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="login"
-                                       type="text"
-                                       name="login"
-                                       autocomplete="off"
-                                       aria-invalid="true"
-                                       placeholder="Придумайте логин">
+                                {{> input class="form-auth__input"
+                                        id="login"
+                                        type="text"
+                                        name="second_namelogin"
+                                        placeholder="Придумайте логин"}}
                             </div>
                         </div>
                         <div class="form-auth__row">
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="email"
-                                       type="text"
-                                       name="email"
-                                       autocomplete="off"
-                                       aria-invalid="true"
-                                       placeholder="Email">
+                                {{> input class="form-auth__input"
+                                        id="email"
+                                        type="text"
+                                        name="email"
+                                        placeholder="Email"}}
                             </div>
                         </div>
                         <div class="form-auth__row">
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="password"
-                                       type="password"
-                                       name="password"
-                                       autocomplete="off"
-                                       aria-invalid="true"
-                                       placeholder="Придумайте пароль">
+                                {{> input class="form-auth__input"
+                                        id="password"
+                                        type="password"
+                                        name="password"
+                                        placeholder="Придумайте пароль"}}
                             </div>
                         </div>
                         <div class="form-auth__row">
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="phone"
-                                       type="text"
-                                       name="phone"
-                                       autocomplete="off"
-                                       aria-invalid="true"
-                                       placeholder="Номер мобильного телефона">
+                                {{> input class="form-auth__input"
+                                        id="phone"
+                                        type="text"
+                                        name="phone"
+                                        placeholder="Номер мобильного телефона"}}
                             </div>
                         </div>
                     </div>
                     <div class="form-auth__box-button-action">
-                        <button type="submit"
-                                class="custom-button button_width_max button_color_blue form-auth__button-action">
-                            {{title}}
-                        </button>
+                        {{> button class="button_width_max button_color_blue form-auth__button-action"
+                                type="submit"
+                                nameButton="Зарегистрироваться"}}
                     </div>
                 </form>
             </div>

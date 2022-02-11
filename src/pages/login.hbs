@@ -1,11 +1,10 @@
 ---
 title: Авторизация
-nameForm: Авторизоваться
 labelTextId: Введите ваш ID
 labelTextPass: Введите пароль
 passageTitle: У Вас нет аккаунта?
 linkTextRegistration: Ещё не зарегистрированы?
-linkRegistration: ./registration.hbs
+linkRegistration: ./registration
 stylesheets:
 - ../sass/auth.scss
 scripts:
@@ -17,20 +16,18 @@ scripts:
         <div class="auth">
             <div class="form-auth__box">
                 <form method="post" action="#" novalidate>
-                    <div class="form-auth__title">{{nameForm}}</div>
+                    <div class="form-auth__title">{{title}}</div>
                     <div class="form-auth__box-input">
                         <div class="form-auth__row">
                             <div class="form-auth__label-box">
                                 <label class="form-auth__label" for="login">{{labelTextId}}</label>
                             </div>
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="login"
-                                       type="text"
-                                       name="login"
-                                       autocorrect="off"
-                                       autocapitalize="off"
-                                       placeholder="email">
+                                {{> input class="form-auth__input"
+                                        id="login"
+                                        type="text"
+                                        name="login"
+                                        placeholder="email"}}
                             </div>
                         </div>
                         <div class="form-auth__row">
@@ -38,19 +35,17 @@ scripts:
                                 <label class="form-auth__label" for="password">{{labelTextPass}}</label>
                             </div>
                             <div class="form-auth__cell">
-                                <input class="custom-input form-auth__input"
-                                       id="password"
-                                       type="password"
-                                       name="password"
-                                       autocorrect="off"
-                                       autocapitalize="off"
-                                       placeholder="* * * * * * *">
+                                {{> input class="form-auth__input"
+                                        id="password"
+                                        type="password"
+                                        name="password"
+                                        placeholder="* * * * * * *"}}
                             </div>
                         </div>
                     </div>
                     <div class="form-auth__box-button-action">
-                        {{> button  text='Войти'
-                                className='button_width_max button_color_blue form-auth__button-action'
+                        {{> button  nameButton='Войти'
+                                class='button_width_max button_color_blue form-auth__button-action'
                                 type='submit'}}
                     </div>
                 </form>
