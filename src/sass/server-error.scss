@@ -1,0 +1,28 @@
+@import "main";
+
+.page-error {
+  background: url("https://cdn-data.motu.com/django_prod/filer_public_thumbnails/filer_public/3b/87/3b87a276-364d-4e31-88d0-ed9fe9656aeb/macos_big_sur_wp_header.jpg__6016x3382_q85_subsampling-2.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.page-error__box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  font-size: 6em;
+  color: #ffe6ff;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+.page-error__info {
+  font-size: 26px;
+}

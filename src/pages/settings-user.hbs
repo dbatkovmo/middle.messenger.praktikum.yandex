@@ -1,0 +1,90 @@
+---
+title: Настройки пользователя
+stylesheets:
+- ../sass/settings-user.scss
+scripts:
+- ../modules/settings-user/settings-user.js
+---
+
+{{#extend "baseLayout"}}
+    {{#content "main"}}
+        <div class="settings-user-page">
+            <div class="wrap-settings-user">
+                <div class="settings-user-page__title">{{title}}</div>
+                <div class="settings-user">
+                    <div class="settings-user__box-avatar">
+                        <img class="settings-user__avatar"
+                             src="https://image.freepik.com/free-photo/happy-bearded-young-man-looks-with-joyful-expression-has-friendly-smile-wears-yellow-sweater-red-hat_295783-1388.jpg">
+                        <button class="custom-button settings-user__button-edit-avatar">изменить</button>
+                        <input class="settings-user__input" type="file" name="avatar" hidden>
+                    </div>
+                    <div class="settings-user__main">
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Имя</div>
+                            <div class="settings-user__cell">
+                                <div class="settings-user__info">Дмитрий</div>
+                                <button class="custom-button settings-user__button-edit" data-name="first_name">
+                                    изменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Отчество</div>
+                            <div class="settings-user__cell">
+                                <div class="settings-user__info">Олегович</div>
+                                <button class="custom-button settings-user__button-edit" data-name="second_name">
+                                    изменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Логин</div>
+                            <div class="settings-user__cell">
+                                <div class="settings-user__info">dbatkovmo</div>
+                                <button class="custom-button settings-user__button-edit" data-name="login">изменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Email</div>
+                            <div class="settings-user__cell">
+                                <div class="settings-user__info">dbatkovmo@gmail.com</div>
+                                <button class="custom-button settings-user__button-edit" data-name="email">изменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Номер мобильного телефона</div>
+                            <div class="settings-user__cell">
+                                <div class="settings-user__info">+79969601476</div>
+                                <button class="custom-button settings-user__button-edit" data-name="phone">изменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="settings-user__row">
+                            <div class="settings-user__label">Пароль</div>
+                            <div class="settings-user__cell">
+                                <div class="settings-user__info">*******</div>
+                                <button class="custom-button settings-user__button-edit" data-name="password">изменить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade modal-edit-settings" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content p-3">
+                    <div class="modal-edit-settings__title">Редактирование</div>
+                    <div class="modal-edit-settings__box-input">
+                        <input class="custom-input modal-edit-settings__input">
+                    </div>
+                    <button class="custom-button button_color_blue modal-edit-settings__button-save">Изменить</button>
+                </div>
+            </div>
+        </div>
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,20 @@
+.custom-button {
+  border-radius: 5px;
+}
+
+.button_color_blue {
+  background: #0085FF;
+  color: #fff;
+
+  &:hover {
+    background: #0675db;
+  }
+}
+
+.link_width_max {
+  width: 100%;
+}
+
+.button_width_max {
+  width: 100%;
+}
