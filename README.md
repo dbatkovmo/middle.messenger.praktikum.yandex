@@ -27,7 +27,7 @@
 - `npm run build` — запуск сборки проекта в dist/,
 - `npm run start` — запуск сервера Express на localhost:3000 для раздачи статики из dist/.
 
-### Запуск проекта
+### Дополнительно
 Netlify домен - https://keen-lewin-fd313e.netlify.app
 
 Pull request - https://github.com/Alkamenos/middle.messenger.praktikum.yandex/
